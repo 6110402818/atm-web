@@ -4,16 +4,16 @@
       xmlns:th="https://www.thymeleaf.org">
 
 <div class="container" layout:fragment="content">
-    <h1>Register BankAccount</h1>
-    <form action="#" th:action="@{/bankaccount}" method="POST">
+    <h1>Open Bank Account</h1>
+    <form th:action="@{/bankaccount}" method="POST">
         <div class="form-group">
             <label for="inputId">Id</label>
             <input type="input" class="form-control" name="id" id="inputId">
         </div>
 
         <div class="form-group">
-            <label for="inputCustomerID">Customer Id</label>
-            <input type="input" class="form-control" name="customerId" id="inputCustomerID">
+            <label for="inputCustomerId">Customer id</label>
+            <input type="input" class="form-control" name="customerId" id="inputCustomerId">
         </div>
 
         <div class="form-group">
@@ -26,23 +26,21 @@
             <input type="input" class="form-control" name="balance" id="inputBalance">
         </div>
 
-
         <div class="form-group">
             <input type="submit" class="btn btn-primary">
         </div>
     </form>
-    <hr>
 
-    <h1>All BankAccount</h1>
-    <table class="table table-bordered">
+    <table class="table">
         <thead class="thead-light">
         <tr>
             <th>Id</th>
-            <th>Customer Id</th>
+            <th>CustomerId</th>
             <th>Type</th>
             <th>Balance</th>
         </tr>
         </thead>
+
         <tbody>
         <tr th:each="bankaccount: ${allBankAccounts}">
             <td th:text="${bankaccount.id}"></td>

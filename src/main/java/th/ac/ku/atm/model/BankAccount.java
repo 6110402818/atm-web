@@ -1,14 +1,10 @@
 package th.ac.ku.atm.model;
 
 public class BankAccount {
-
     private int id;
     private int customerId;
     private String type;
     private double balance;
-
-    //  ..Generate.. Getters, Setters, toString()
-
 
     public BankAccount(int id, int customerId, String type, double balance) {
         this.id = id;
@@ -47,15 +43,5 @@ public class BankAccount {
 
     public void setBalance(double balance) {
         this.balance = balance;
-    }
-
-    @Override
-    public String toString() {
-        return "BankAccount{" +
-                "id=" + id +
-                ", customerId=" + customerId +
-                ", type='" + type + '\'' +
-                ", balance=" + balance +
-                '}';
     }
 }
